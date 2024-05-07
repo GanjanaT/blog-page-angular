@@ -1,0 +1,9 @@
+<nav>
+    <ul>
+        @for(route of routes; track $index){
+            <li>
+                <a [routerLink]="route.path"><img src={{route.url}} alt={{route.title}}></a>
+            </li>
+        }
+    </ul>
+</nav>

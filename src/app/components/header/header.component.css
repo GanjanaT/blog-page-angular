@@ -1,0 +1,16 @@
+header {
+    padding: 0px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(179, 195, 187);
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 -6px 6px 8px rgba(8, 8, 14, 0.5);
+}
+
+h1, p {
+    margin: 0;
+    color: rgb(54, 72, 80);
+}
