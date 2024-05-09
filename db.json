@@ -1,0 +1,11 @@
+{
+  "blogposts": [
+    {
+      "id": "string",
+      "name": "string",
+      "email": "string",
+      "title": "string",
+      "content": "string"
+    }
+  ]
+}

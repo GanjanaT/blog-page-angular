@@ -1,14 +1,13 @@
 <form [formGroup]="blogpostForm" (ngSubmit)="onSubmit()">
-  <h3>Tell your story</h3>
-  <div>
+  <div class="input-wrapper">
     <label for="title">Title:</label>
     <input type="text" id="title" placeholder="Blog post title" formControlName="title" />
   </div>
-  <div>
+  <div class="input-wrapper">
     <label for="content">Content:</label>
-    <textarea name="content" id="content" placeholder="Your content" formControlName="content"></textarea>
+    <textarea name="content" id="content" placeholder="Your content" rows="7" formControlName="content"></textarea>
   </div>
-  <div>
+  <div class="contact-wrapper">
     <div>
       <label for="name">Name:</label>
       <input type="text" id="name" placeholder="Your name" formControlName="name" />
@@ -18,4 +17,5 @@
       <input type="text" id="email" placeholder="Email" formControlName="email" />
     </div>
   </div>
+  <button [disabled]="blogpostForm.invalid">Send blogpost</button>
 </form>

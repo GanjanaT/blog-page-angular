@@ -1,14 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 import { BlogFormComponent } from './components/blog-form/blog-form.component';
+import { BlogpostComponent } from './components/blogpost/blogpost.component';
+import { BlogPostService } from '../../services/blog-post/blog-post.service';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [SidebarComponent, BlogFormComponent],
+  imports: [SidebarComponent, BlogFormComponent, BlogpostComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })
-export class HomePageComponent {
+export class HomePageComponent implements OnInit {
+  blogPostService : BlogPostService = inject(BlogPostService);
 
+  get blogPosts() {
+    return this.blogPostService.getBlogPosts();
+  }
+
+  ngOnInit(): void {
+    this.blogPostService.loadBlogPosts();
+  }
 }

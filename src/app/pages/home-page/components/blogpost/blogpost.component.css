@@ -1,0 +1,32 @@
+.blogpost {
+    margin-bottom: 10px;
+    padding: 20px;
+    min-height: 200px;
+    max-height: 380px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 2px 4px gray;
+}
+
+h3 {
+    margin: 5px 0px;
+    font-family: "Fjalla One", sans-serif;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+p { 
+    font-family: "Poppins", sans-serif;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.blogpost-img {
+    height: 150px;
+    border: 5px solid white;
+    box-shadow: 1px 2px 4px gray;
+}

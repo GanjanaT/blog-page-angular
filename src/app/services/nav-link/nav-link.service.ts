@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { INavLink } from '../../core/navlinks.model';
+import { INavLink } from '../../core/nav-link.model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class NavbarService {
+export class NavLinkService {
   private routes: INavLink[] = [
     { path: '', url: '/assets/home.png', title: 'Home' },
     { path: '/account', url: '/assets/account.png', title: 'Account' },

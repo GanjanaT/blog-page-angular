@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NavbarService } from '../../services/navbar/navbar.service';
-import { INavLink } from '../../core/navlinks.model';
+import { NavLinkService } from '../../services/nav-link/nav-link.service';
+import { INavLink } from '../../core/nav-link.model';
 
 @Component({
   selector: 'app-navbar',
@@ -11,6 +11,6 @@ import { INavLink } from '../../core/navlinks.model';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  navbarService = inject(NavbarService);
-  routes : INavLink[] = this.navbarService.getRoutes()
+  navLinkService = inject(NavLinkService);
+  routes : INavLink[] = this.navLinkService.getRoutes()
 }

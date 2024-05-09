@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { BlogPostService } from '../../../../services/blog-post/blog-post.service';
+import { BlogPost } from '../../../../core/blog-post.model';
 
 @Component({
   selector: 'app-blog-form',
@@ -11,6 +13,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 export class BlogFormComponent {
   formBuilder: FormBuilder;
   blogpostForm;
+  blogPostService: BlogPostService = inject(BlogPostService);
   
   constructor(formBuilder: FormBuilder){
     this.formBuilder = formBuilder;
@@ -23,7 +26,7 @@ export class BlogFormComponent {
   }
 
   onSubmit(){
-    console.log(this.blogpostForm.value);
-    
+    // this.blogPostService.addBlogPost(new BlogPost(this.blogpostForm.value.name, this.blogpostForm.value.content, this.blogpostForm.value.name, this.blogpostForm.value.email))
+    this.blogPostService.addBlogPost(new BlogPost("d","d","d","d"))
   }
 }
