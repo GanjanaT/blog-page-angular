@@ -6,6 +6,7 @@ export interface IBlogPost{
     content: string;
     name: string;
     email: string;
+    date: string;
 }
 
 export class BlogPost implements IBlogPost{
@@ -14,6 +15,7 @@ export class BlogPost implements IBlogPost{
     content: string;
     name: string;
     email: string;
+    date: string;
 
     constructor(title: string, content: string, name: string, email: string){
         this.id = uuidv4();
@@ -21,6 +23,7 @@ export class BlogPost implements IBlogPost{
         this.content = content;
         this.name = name;
         this.email = email;
+        this.date = new Date().toLocaleString();
     }
 
 }

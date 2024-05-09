@@ -2,7 +2,7 @@
     <app-sidebar class="sidebar"></app-sidebar>
     <div class="blogposts">
       @for(blogPost of blogPosts; track blogPost.id;){
-        <app-blogpost [blogPost]="blogPost"></app-blogpost>
+        <app-blog-post [blogPost]="blogPost"></app-blog-post>
       }
     </div>
     <div class="inputfield">

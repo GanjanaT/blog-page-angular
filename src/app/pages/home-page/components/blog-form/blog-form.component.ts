@@ -21,12 +21,12 @@ export class BlogFormComponent {
       title: ['', [Validators.required]],
       content: ['', [Validators.required]],
       name: ['', [Validators.required]],
-      email: ['', [Validators.required]]
+      email: ['', [Validators.required, Validators.email]]
     })
   }
 
   onSubmit(){
-    // this.blogPostService.addBlogPost(new BlogPost(this.blogpostForm.value.name, this.blogpostForm.value.content, this.blogpostForm.value.name, this.blogpostForm.value.email))
-    this.blogPostService.addBlogPost(new BlogPost("d","d","d","d"))
+    let blogPost = new BlogPost(this.blogpostForm.value.title!, this.blogpostForm.value.content!, this.blogpostForm.value.name!, this.blogpostForm.value.email!)
+    this.blogPostService.addBlogPost(blogPost)
   }
 }

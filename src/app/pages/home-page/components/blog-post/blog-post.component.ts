@@ -2,13 +2,13 @@ import { Component, Input } from '@angular/core';
 import { BlogPost } from '../../../../core/blog-post.model';
 
 @Component({
-  selector: 'app-blogpost',
+  selector: 'app-blog-post',
   standalone: true,
   imports: [],
-  templateUrl: './blogpost.component.html',
-  styleUrl: './blogpost.component.css'
+  templateUrl: './blog-post.component.html',
+  styleUrl: './blog-post.component.css'
 })
-export class BlogpostComponent {
+export class BlogPostComponent {
   @Input() blogPost : BlogPost = new BlogPost("","","","");
 
 }
