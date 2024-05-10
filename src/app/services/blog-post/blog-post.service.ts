@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BlogPost} from '../../core/blog-post.model';
-import { Subject } from 'rxjs';
+import { Observable, Subject} from 'rxjs';
+import { map} from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -8,14 +9,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BlogPostService {
   // blogPosts : BlogPost[] = [];
-  url = 'http://localhost:3000/blogposts';
+  private url = 'http://localhost:3000/blogposts';
   reload = new Subject<void>();
 
   constructor(private http: HttpClient) {}
 
-  async getBlogPosts() {
-    const res = await fetch(this.url);
-    return await res.json();
+  async getBlogPosts(){
+     return this.http.get<BlogPost[]>(this.url)
   }
 
   // updateBlogPosts() {
@@ -30,5 +30,10 @@ export class BlogPostService {
         "Content-Type" : "application/json"
       }
     }).subscribe(() => this.reload.next())
+  }
+
+ getBlogPostById(id : string){
+  const url = `${this.url}/${id}`
+  return this.http.get<BlogPost>(url)
   }
 }

@@ -1,12 +1,16 @@
 <article class="blog-post">
-  <h3>
-    {{ blogPost.title }} <span>{{ blogPost.date }}</span>
-  </h3>
+  <a [routerLink]="['/blog-post-page', blogPost.id]">
+    <h3>
+      {{ blogPost.title }} <span>{{ blogPost.date }}</span>
+    </h3>
+  </a>
   <p>{{ blogPost.content }}</p>
   <img
     class="blog-post-img"
     src="/assets/barcelona.jpg"
-    alt="{{ blogPost.title }}"
+    [alt]="blogPost.title"
   />
-  <p class="published-by">Published by {{blogPost.name}}</p>
+  <p class="published-by">
+    Published by {{ blogPost.name }} <span>Contact: {{ blogPost.email }}</span>
+  </p>
 </article>

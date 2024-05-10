@@ -1,21 +1,39 @@
 <form [formGroup]="blogpostForm" (ngSubmit)="onSubmit()">
   <div class="input-wrapper">
-    <label for="title">Title:</label>
+    <label for="title">Title: @if(formField.title.invalid && formField.title.touched){
+      <span class="error">Please enter a title</span>
+    }</label>
     <input type="text" id="title" placeholder="Blog post title" formControlName="title" />
   </div>
   <div class="input-wrapper">
-    <label for="content">Content:</label>
+    <label for="content">Content: @if(formField.content.invalid && formField.content.touched){
+      <span class="error">Please enter some content</span>
+    }</label>
     <textarea name="content" id="content" placeholder="Your content" rows="7" formControlName="content"></textarea>
   </div>
   <div class="contact-wrapper">
     <div>
       <label for="name">Name:</label>
       <input type="text" id="name" placeholder="Your name" formControlName="name" />
+      <div>
+        @if(formField.name.invalid && formField.name.touched){
+          <span class="error">Please enter your name</span>
+        }
+      </div>
     </div>
     <div>
       <label for="email">Email:</label>
       <input type="text" id="email" placeholder="Email" formControlName="email" />
+      <div>
+        @if(formField.email.touched && formField.email.hasError('required')){
+          <span class="error">Please enter your email</span>
+        } @else if(formField.email.hasError('email') && formField.email.touched){
+          <span class="error">Please enter a valid email</span>
+        }
+      </div>
     </div>
   </div>
-  <button [disabled]="blogpostForm.invalid">Send blogpost</button>
+  <div class="button-wrapper">
+    <button [disabled]="blogpostForm.invalid">Send blogpost</button>
+  </div>
 </form>

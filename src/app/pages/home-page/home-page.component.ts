@@ -17,7 +17,7 @@ export class HomePageComponent implements OnInit {
   blogPostService : BlogPostService = inject(BlogPostService);
 
   // get blogPosts() {
-  //   return this.blogPostService.updateBlogPosts();
+  //   return this.blogPostService.getBlogPosts();
   // }
 
   ngOnInit(): void {
@@ -25,8 +25,11 @@ export class HomePageComponent implements OnInit {
     this.blogPostService.reload.subscribe(() => this.updateBlogPosts());
   }
 
-  updateBlogPosts() {
-    this.blogPostService.getBlogPosts().then(blogPosts => {
+  async updateBlogPosts() {
+    // this.blogPostService.getBlogPosts().then(blogPosts => {
+    //   this.blogPosts = blogPosts
+    // })
+     (await this.blogPostService.getBlogPosts()).subscribe(blogPosts => {
       this.blogPosts = blogPosts
     })
   }
