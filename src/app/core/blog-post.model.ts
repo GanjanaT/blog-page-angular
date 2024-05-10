@@ -23,7 +23,7 @@ export class BlogPost implements IBlogPost{
         this.content = content;
         this.name = name;
         this.email = email;
-        this.date = new Date().toLocaleString();
+        this.date = new Date().toLocaleDateString();
     }
 
 }

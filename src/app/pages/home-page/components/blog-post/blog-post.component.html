@@ -1,5 +1,12 @@
 <article class="blog-post">
-    <h3>{{blogPost.title}}</h3>
-    <p>{{blogPost.content}}</p>
-  <img class="blog-post-img" src="/assets/barcelona.jpg" alt={{blogPost.title}}>
+  <h3>
+    {{ blogPost.title }} <span>{{ blogPost.date }}</span>
+  </h3>
+  <p>{{ blogPost.content }}</p>
+  <img
+    class="blog-post-img"
+    src="/assets/barcelona.jpg"
+    alt="{{ blogPost.title }}"
+  />
+  <p class="published-by">Published by {{blogPost.name}}</p>
 </article>

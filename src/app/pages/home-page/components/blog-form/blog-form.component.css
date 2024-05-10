@@ -16,6 +16,12 @@ label {
     margin-right: 5px;
 }
 
+input {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
 .contact-wrapper {
     display: flex;
     gap: 50px;

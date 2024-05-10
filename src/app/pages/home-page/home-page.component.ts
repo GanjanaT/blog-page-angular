@@ -3,6 +3,7 @@ import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 import { BlogFormComponent } from './components/blog-form/blog-form.component';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { BlogPostService } from '../../services/blog-post/blog-post.service';
+import { BlogPost } from '../../core/blog-post.model';
 
 @Component({
   selector: 'app-home-page',
@@ -12,13 +13,21 @@ import { BlogPostService } from '../../services/blog-post/blog-post.service';
   styleUrl: './home-page.component.css'
 })
 export class HomePageComponent implements OnInit {
+  blogPosts : BlogPost[] = [];
   blogPostService : BlogPostService = inject(BlogPostService);
 
-  get blogPosts() {
-    return this.blogPostService.getBlogPosts();
-  }
+  // get blogPosts() {
+  //   return this.blogPostService.updateBlogPosts();
+  // }
 
   ngOnInit(): void {
-    this.blogPostService.loadBlogPosts();
+    this.updateBlogPosts();
+    this.blogPostService.reload.subscribe(() => this.updateBlogPosts());
+  }
+
+  updateBlogPosts() {
+    this.blogPostService.getBlogPosts().then(blogPosts => {
+      this.blogPosts = blogPosts
+    })
   }
 }

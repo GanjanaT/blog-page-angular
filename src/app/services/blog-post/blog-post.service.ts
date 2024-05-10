@@ -1,33 +1,34 @@
 import { Injectable } from '@angular/core';
 import { BlogPost} from '../../core/blog-post.model';
+import { Subject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BlogPostService {
+  // blogPosts : BlogPost[] = [];
   url = 'http://localhost:3000/blogposts';
-  blogPosts: BlogPost[] = [];
+  reload = new Subject<void>();
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
-  getBlogPosts() {
-    return this.blogPosts;
-  }
-
-  async loadBlogPosts() {
+  async getBlogPosts() {
     const res = await fetch(this.url);
-    this.blogPosts = await res.json();
+    return await res.json();
   }
+
+  // updateBlogPosts() {
+  //   this.getBlogPosts().then(blogPosts => {
+  //     this.blogPosts = blogPosts
+  //   })
+  // }
 
   async addBlogPost(blogPost: BlogPost){
-    await fetch(this.url, {
-      method: 'POST',
-      body: JSON.stringify(blogPost),
+    this.http.post(this.url, blogPost, {
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type" : "application/json"
       }
-    })
-
-    this.loadBlogPosts();
+    }).subscribe(() => this.reload.next())
   }
 }
