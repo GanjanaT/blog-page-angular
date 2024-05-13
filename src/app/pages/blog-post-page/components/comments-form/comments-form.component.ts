@@ -24,6 +24,10 @@ export class CommentsFormComponent {
     })
   }
 
+  get formField(){
+    return this.commentForm.controls
+  }
+
   onSubmit(){
     this.commentsService.addComment(this.id, new Comment(this.commentForm.value.name!, this.commentForm.value.comment!));
     this.commentForm.reset()

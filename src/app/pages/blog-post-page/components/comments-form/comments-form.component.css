@@ -24,6 +24,10 @@ input {
     font-family: "Poppins", sans-serif;
 }
 
+:is(input,textarea).ng-invalid.ng-touched{
+    border: 1px solid rgb(255, 0, 0);
+}
+
 .button {
     width: 20%;
     height: 100%;

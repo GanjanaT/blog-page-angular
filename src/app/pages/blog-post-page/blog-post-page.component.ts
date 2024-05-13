@@ -6,8 +6,6 @@ import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { CommentsFormComponent } from './components/comments-form/comments-form.component';
 import { CommentsService } from '../../services/comments/comments.service';
-import { Comment, Comments, IComments } from '../../core/comment.model';
-import { catchError } from 'rxjs';
 
 @Component({
   selector: 'app-blog-post-page',

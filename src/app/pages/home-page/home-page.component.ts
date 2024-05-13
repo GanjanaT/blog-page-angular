@@ -16,10 +16,6 @@ export class HomePageComponent implements OnInit {
   blogPosts: BlogPost[] = [];
   blogPostService: BlogPostService = inject(BlogPostService);
 
-  // get blogPosts() {
-  //   return this.blogPostService.getBlogPosts();
-  // }
-
   ngOnInit(): void {
     this.loadBlogPosts();
     this.blogPostService.reload.subscribe(() => this.loadBlogPosts());

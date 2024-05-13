@@ -21,7 +21,6 @@ export class CommentsComponent {
     const id = this.activatedRoute.snapshot.params['id'];
     this.updateComments(id)
     this.commentsService.reload.subscribe(() => this.updateComments(id))
-      // c.pageComments.forEach(element => this.hej.push(element))
   }
 
   updateComments(id: string){
