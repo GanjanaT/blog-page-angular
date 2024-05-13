@@ -1,13 +1,12 @@
 <div class="container">
-    <app-sidebar class="sidebar"></app-sidebar>
-    <div class="blogposts">
-      @for(blogPost of blogPosts; track blogPost.id;){
-        <app-blog-post [blogPost]="blogPost"></app-blog-post>
-      }
-    </div>
-    <div class="inputfield">
-      <h2>Tell your story</h2>
-      <app-blog-form></app-blog-form>
-    </div>
+  <app-sidebar class="sidebar"></app-sidebar>
+  <div class="blogposts">
+    @for(blogPost of blogPosts; track blogPost.id;){
+    <app-blog-post [blogPost]="blogPost"></app-blog-post>
+    }
   </div>
-  
+  <div class="inputfield">
+    <h2>Tell your story</h2>
+    <app-blog-form></app-blog-form>
+  </div>
+</div>

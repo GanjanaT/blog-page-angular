@@ -10,27 +10,24 @@ import { BlogPost } from '../../core/blog-post.model';
   standalone: true,
   imports: [SidebarComponent, BlogFormComponent, BlogPostComponent],
   templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.css'
+  styleUrl: './home-page.component.css',
 })
 export class HomePageComponent implements OnInit {
-  blogPosts : BlogPost[] = [];
-  blogPostService : BlogPostService = inject(BlogPostService);
+  blogPosts: BlogPost[] = [];
+  blogPostService: BlogPostService = inject(BlogPostService);
 
   // get blogPosts() {
   //   return this.blogPostService.getBlogPosts();
   // }
 
   ngOnInit(): void {
-    this.updateBlogPosts();
-    this.blogPostService.reload.subscribe(() => this.updateBlogPosts());
+    this.loadBlogPosts();
+    this.blogPostService.reload.subscribe(() => this.loadBlogPosts());
   }
 
-  async updateBlogPosts() {
-    // this.blogPostService.getBlogPosts().then(blogPosts => {
-    //   this.blogPosts = blogPosts
-    // })
-     (await this.blogPostService.getBlogPosts()).subscribe(blogPosts => {
-      this.blogPosts = blogPosts
-    })
+  loadBlogPosts() {
+    this.blogPostService
+      .getBlogPosts()
+      .subscribe((blogPosts) => (this.blogPosts = blogPosts));
   }
 }

@@ -1,0 +1,9 @@
+<ul class="comments">
+  @if(comments.pageComments.length > 0){
+    @for (comment of comments.pageComments; track $index) {
+      <app-comment [comment]="comment"></app-comment>
+    }
+  }@else {
+    <p>No comments</p>
+  }
+</ul>

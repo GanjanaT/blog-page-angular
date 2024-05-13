@@ -1,1 +1,20 @@
-<p>{{ blogPost.name }}</p>
+<section class="container">
+  <app-sidebar class="sidebar"></app-sidebar>
+  <section class="blog-post">
+    <div>
+      <h2>
+        {{ blogPost.title }} <span>{{ blogPost.date }}</span>
+      </h2>
+      <p>{{ blogPost.content }}</p>
+    </div>
+    <div class="username">
+      <p>Published by {{ blogPost.name }}</p>
+      <p>Contact: {{ blogPost.email }}</p>
+    </div>
+  </section>
+  <section class="comments-wrapper">
+    <h3>User Comments</h3>
+    <app-comments></app-comments>
+    <app-comments-form></app-comments-form>
+  </section>
+</section>
