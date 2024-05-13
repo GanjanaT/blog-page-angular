@@ -7,7 +7,12 @@
     box-shadow: 1px 2px 4px gray;
 }
 
-.comment div {
+.user-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user {
     display: flex;
     align-items: center;
 }

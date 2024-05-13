@@ -18,14 +18,15 @@ import { catchError } from 'rxjs';
 })
 export class BlogPostPageComponent implements OnInit {
   blogPost: BlogPost = new BlogPost('', '', '', '');
+  id: string = "";
   activatedRoute: ActivatedRoute = inject(ActivatedRoute);
   blogPostService: BlogPostService = inject(BlogPostService);
   commentsService: CommentsService = inject(CommentsService);
 
   ngOnInit(): void {
-    let id = this.activatedRoute.snapshot.params['id'];
+    this.id = this.activatedRoute.snapshot.params['id'];
     this.blogPostService
-      .getBlogPostById(id)
+      .getBlogPostById(this.id)
       .subscribe((res) => (this.blogPost = res));
   }
 }

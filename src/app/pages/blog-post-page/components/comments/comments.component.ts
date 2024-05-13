@@ -19,11 +19,15 @@ export class CommentsComponent {
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];
+    this.updateComments(id)
+    this.commentsService.reload.subscribe(() => this.updateComments(id))
+      // c.pageComments.forEach(element => this.hej.push(element))
+  }
+
+  updateComments(id: string){
     this.commentsService
       .getUserComments(id)
       .subscribe((comments) => this.comments = comments);
-
-      // c.pageComments.forEach(element => this.hej.push(element))
   }
   
 }

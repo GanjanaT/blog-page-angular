@@ -1,13 +1,13 @@
-<form>
+<form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
   <div class="input-wrapper">
-    <textarea name="comment" id="comment" placeholder="Comment here"></textarea>
+    <textarea name="comment" id="comment" placeholder="Comment here" formControlName="comment"></textarea>
     <div>
       <label for="name">
-        <input type="text" id="name" placeholder="Name" />
+        <input type="text" id="name" placeholder="Name" formControlName="name" />
       </label>
     </div>
   </div>
   <div class="button">
-    <button>Send</button>
+    <button [disabled]="commentForm.invalid">Send</button>
   </div>
 </form>

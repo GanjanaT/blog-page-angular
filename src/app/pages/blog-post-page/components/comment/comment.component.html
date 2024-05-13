@@ -1,7 +1,12 @@
 <li class="comment">
-  <div>
-    <img src="/assets/account.png" alt="user" />
-    <span>{{ comment.name }}</span>
+  <div class="user-info">
+    <div class="user">
+      <img src="/assets/account.png" alt="user" />
+      <span>{{ comment.name }}</span>
+    </div>
+    <div>
+      <span>{{ comment.date }}</span>
+    </div>
   </div>
   <p>{{comment.comment}}</p>
 </li>
