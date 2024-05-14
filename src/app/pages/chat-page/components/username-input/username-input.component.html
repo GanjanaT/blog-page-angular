@@ -1,5 +1,6 @@
 <section class="container">
   <div>
+    <img src="/assets/chat.png" alt="">
     <label for="username">To start this chat enter a username</label>
     <input type="text" id="username" placeholder="username" [(ngModel)]="usernameInput" />
     <button (click)="onClick()" [disabled]="usernameInput.length === 0">Start Chat</button>

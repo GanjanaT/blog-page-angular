@@ -1,0 +1,9 @@
+<form class="input-wrapper" (submit)="onSendMessage()">
+    <div class="user-info">
+      <h2>{{ username }}</h2>
+    </div>
+    <div class="input">
+      <textarea name="message" id="message" placeholder="Write a message" [(ngModel)]="message"></textarea>
+      <button type="submit">Send</button>
+    </div>
+</form>

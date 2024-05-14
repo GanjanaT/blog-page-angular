@@ -8,11 +8,19 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ChatService {
   url = 'http://localhost:3000/chat';
-
+  username : string = "";
   reload = new Subject<void>();
   messageSubscription: Subscription = new Subscription();
 
   constructor(private http: HttpClient) {}
+
+  setUsername(username: string){
+    this.username = username;
+  }
+
+  getUsername(){
+    return this.username;
+  }
 
   getMessages() {
     return this.http.get<Message[]>(this.url);

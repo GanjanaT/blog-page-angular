@@ -5,7 +5,7 @@
     flex-direction: column;
     background-color: rgb(59, 59, 59);
     overflow: auto;
-    border: 2px inset white;
+    border: 4px inset rgb(189, 186, 186);
 }
 
 ::-webkit-scrollbar {
@@ -29,6 +29,7 @@ h2 {
     padding: 10px;
     min-height: 70px;
     min-width: 300px;
+    font-family: "Poppins", sans-serif;
     background-color: rgb(249, 253, 251);
     border-radius: 10px;
     list-style: none;
@@ -37,13 +38,11 @@ h2 {
 
 .right {
     align-self: self-end;
-    text-align: right;
     background-color: rgb(238, 227, 255);
 }
 
 .left {
     align-self: self-start;
-    text-align: left;
     background-color: rgb(222, 229, 255);
 }
 
