@@ -1,5 +1,5 @@
 .container {
-    height: 91.3vh;
+    height: 90.8vh;
     display: grid;
     grid-template-areas:
         "sidebar blogposts"
@@ -13,13 +13,11 @@
 }
 
 .blogposts {
-    /* max-height: 54vh; */
     grid-area: blogposts;
     margin: 20px;
     padding-right: 10px;
     border-radius: 0px;
     overflow: auto;
-    /* border-bottom: 2px solid gray; */
 }
 
 ::-webkit-scrollbar {

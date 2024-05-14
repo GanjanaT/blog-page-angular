@@ -25,6 +25,10 @@ export class BlogFormComponent {
     })
   }
 
+  get formField(){
+    return this.blogpostForm.controls
+  }
+
   onSubmit(){
       let blogPost = new BlogPost(this.blogpostForm.value.title!, this.blogpostForm.value.content!, this.blogpostForm.value.name!, this.blogpostForm.value.email!);
       this.blogPostService.addBlogPost(blogPost);

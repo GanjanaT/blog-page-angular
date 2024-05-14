@@ -1,0 +1,40 @@
+.container {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+.container div {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 20px;
+}
+
+label {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+input{
+    padding: 5px;
+    height: 50px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 2px inset rgb(201, 196, 196);
+}
+
+button {
+    width: 50%;
+    height: 40px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    background-color: #cbd9ff;
+    align-self: center;
+}

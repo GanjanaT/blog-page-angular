@@ -1,0 +1,19 @@
+<div class="chat-wrapper">
+  @for(message of messages; track $index){
+  <div
+    class="message right"
+    [ngClass]="message.username === user ? 'right' : 'left'"
+  >
+    <div class="user-info">
+      <div class="user">
+        <img src="/assets/account.png" alt="user" />
+        <span>{{ message.username }}</span>
+      </div>
+      <div>
+        <span>{{ message.date }}</span>
+      </div>
+    </div>
+    <p>{{ message.message }}</p>
+  </div>
+  }
+</div>
