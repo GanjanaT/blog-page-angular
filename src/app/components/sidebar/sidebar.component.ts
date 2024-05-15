@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, EventEmitter, Output, inject } from '@angular/core';
 import { BlogPostService } from '../../services/blog-post/blog-post.service';
 import { FormsModule } from '@angular/forms';
 import { BlogPost } from '../../core/blog-post.model';
@@ -10,28 +10,21 @@ import { BlogPost } from '../../core/blog-post.model';
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css'
 })
-export class SidebarComponent implements OnInit{
+export class SidebarComponent{
   userInput: string = "";
   filteredList: BlogPost[] = [];
+  @Output() filterPosts = new EventEmitter<BlogPost[]>()
   blogPostService : BlogPostService = inject(BlogPostService)
   
-  ngOnInit(): void {
-  
-  }
-
   onEnter(){
-    this.filterBlogPosts(this.userInput)
+    let word = this.userInput;
+
+    this.blogPostService.getBlogPosts().subscribe(blogPosts => {
+    this.filteredList = blogPosts.filter(post => post.content.toLocaleLowerCase().includes(word) || post.title.toLocaleLowerCase().includes(word));
+    this.filterPosts.emit(this.filteredList)  
+    })
+
     this.userInput = "";
   }
-
-  filterBlogPosts(string : string){
-    this.blogPostService.getBlogPosts().subscribe(res => {
-    this.filteredList = res.filter(x => x.content.toLocaleLowerCase().includes(string))
-   })
-   setTimeout(() => {
-    console.log(this.filteredList.map(res => res))
-   },500)
- }
-
  
 }

@@ -1,8 +1,13 @@
 <div class="container">
-  <app-sidebar class="sidebar"></app-sidebar>
+  <app-sidebar class="sidebar" (filterPosts)="onFilterBlogPosts($event)"></app-sidebar>
   <div class="blogposts">
-    @for(blogPost of blogPosts; track blogPost.id;){
-    <app-blog-post [blogPost]="blogPost"></app-blog-post>
+    @if(!blogPostsExists){
+      <p class="error">Sorry no blog posts matched your searched word!</p>
+      <p class="error" [ngStyle]="{'text-decoration': 'underline', 'cursor': 'pointer', 'color': 'blue'}" (click)="onReturn()">Click to return to blog posts</p>
+    }@else {
+      @for(blogPost of blogPosts; track blogPost.id;){
+        <app-blog-post [blogPost]="blogPost"></app-blog-post>
+        }
     }
   </div>
   <div class="inputfield">

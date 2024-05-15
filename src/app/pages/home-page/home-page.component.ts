@@ -4,16 +4,19 @@ import { BlogFormComponent } from './components/blog-form/blog-form.component';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { BlogPostService } from '../../services/blog-post/blog-post.service';
 import { BlogPost } from '../../core/blog-post.model';
+import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [SidebarComponent, BlogFormComponent, BlogPostComponent],
+  imports: [SidebarComponent, BlogFormComponent, BlogPostComponent, RouterLink, CommonModule],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css',
 })
 export class HomePageComponent implements OnInit {
   blogPosts: BlogPost[] = [];
+  blogPostsExists : boolean = true;
   blogPostService: BlogPostService = inject(BlogPostService);
 
   ngOnInit(): void {
@@ -27,12 +30,16 @@ export class HomePageComponent implements OnInit {
       .subscribe((blogPosts) => (this.blogPosts = blogPosts));
   }
 
-  getFilteredBlogPost(){
-    
+  onFilterBlogPosts(blogPosts : BlogPost[]){
+    if(blogPosts.length === 0){
+      this.blogPostsExists = false;
+    } else {
+      this.blogPosts = blogPosts;
+      this.blogPostsExists = true;
+    }
+  }
+
+  onReturn(){
+    this.blogPostsExists = true;
   }
 }
-
-// hämtar blogposter och tilldelar den till blogPosts[]
-// i html skickar ned blogPost genom data/property binding.
-// använder reload för att visa att det är dags för updatering 
-// gjort en funktion loadBlogPosts för att hämta blogposter vid start

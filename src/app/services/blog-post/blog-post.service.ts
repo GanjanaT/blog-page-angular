@@ -17,7 +17,7 @@ export class BlogPostService {
     return this.http.get<BlogPost[]>(this.url);
   }
 
-  async addBlogPost(blogPost: BlogPost) {
+  addBlogPost(blogPost: BlogPost) {
     this.http
       .post(this.url, blogPost, {
         headers: {
@@ -31,10 +31,4 @@ export class BlogPostService {
     const url = `${this.url}/${id}`;
     return this.http.get<BlogPost>(url);
   }
-
-  // filterBlogPosts(string : string){
-  //    return this.getBlogPosts().subscribe(res => {
-  //    res.map(res => res.content).filter(x => x.toLowerCase().includes(string));
-  //   })
-  // }
 }

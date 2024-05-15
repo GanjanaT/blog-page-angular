@@ -12,6 +12,13 @@
     grid-area: sidebar;
 }
 
+.error {
+    color: red;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+}
+
 .blogposts {
     grid-area: blogposts;
     margin: 20px;
