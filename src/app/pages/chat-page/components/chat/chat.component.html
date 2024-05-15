@@ -1,4 +1,4 @@
-<div class="chat-wrapper">
+<div class="chat-container" #chatContainer>
   @for(message of messages; track $index){
   <div
     class="message right"
@@ -10,7 +10,7 @@
         <span>{{ message.username }}</span>
       </div>
       <div>
-        <span>{{ message.date }}</span>
+        <span>{{ message.date | date: 'short' }}</span>
       </div>
     </div>
     <p>{{ message.message }}</p>

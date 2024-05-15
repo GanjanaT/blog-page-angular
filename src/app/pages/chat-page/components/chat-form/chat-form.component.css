@@ -3,6 +3,7 @@
     padding: 10px;
     width: 100%;
     height: 150px;
+    color: white;
     background-color: rgb(79, 79, 79);
     border-top: 2px outeset rgb(65, 65, 65);
     display: flex;
@@ -37,6 +38,7 @@ textarea {
     border-radius: 5px;
     font-size: 1.2em;
     font-family: "Poppins", sans-serif;
+    resize: none;
 }
 
 button {

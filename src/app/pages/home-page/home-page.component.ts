@@ -26,4 +26,13 @@ export class HomePageComponent implements OnInit {
       .getBlogPosts()
       .subscribe((blogPosts) => (this.blogPosts = blogPosts));
   }
+
+  getFilteredBlogPost(){
+    
+  }
 }
+
+// hämtar blogposter och tilldelar den till blogPosts[]
+// i html skickar ned blogPost genom data/property binding.
+// använder reload för att visa att det är dags för updatering 
+// gjort en funktion loadBlogPosts för att hämta blogposter vid start

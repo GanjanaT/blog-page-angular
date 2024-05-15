@@ -46,7 +46,7 @@ export class CommentsService {
         commentsList.push({ id: id, pageComments: [comment] });
         this.http
           .post(this.url, new Comments(id, [comment]))
-          .subscribe(() => this.reload.next());
+          .subscribe();
       }
     });
   }

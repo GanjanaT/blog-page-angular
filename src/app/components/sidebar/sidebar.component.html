@@ -1,5 +1,5 @@
 <div class="sidebar">
-    <input type="search" placeholder="search..">
+    <input type="search" placeholder="search.." [(ngModel)]="userInput" (keydown.enter)="onEnter()">
     <div class="img-container">
         <img src="/assets/santorini.jpg" alt="Santorini" title="Santorini">
         <img src="/assets/italy.jpg" alt="Italy" title="Italy">

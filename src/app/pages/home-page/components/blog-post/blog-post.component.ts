@@ -11,5 +11,4 @@ import { RouterModule } from '@angular/router';
 })
 export class BlogPostComponent {
   @Input() blogPost : BlogPost = new BlogPost("","","","");
-
 }

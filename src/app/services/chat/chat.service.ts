@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject, Subscription, switchMap, timer } from 'rxjs';
+import { Subject, Subscription, retry, switchMap, timer } from 'rxjs';
 import { Message } from '../../core/message.model';
 import { HttpClient } from '@angular/common/http';
 
@@ -8,17 +8,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ChatService {
   url = 'http://localhost:3000/chat';
-  username : string = "";
+  username: string = '';
   reload = new Subject<void>();
-  messageSubscription: Subscription = new Subscription();
 
   constructor(private http: HttpClient) {}
 
-  setUsername(username: string){
+  setUsername(username: string) {
     this.username = username;
   }
 
-  getUsername(){
+  getUsername() {
     return this.username;
   }
 

@@ -31,4 +31,10 @@ export class BlogPostService {
     const url = `${this.url}/${id}`;
     return this.http.get<BlogPost>(url);
   }
+
+  // filterBlogPosts(string : string){
+  //    return this.getBlogPosts().subscribe(res => {
+  //    res.map(res => res.content).filter(x => x.toLowerCase().includes(string));
+  //   })
+  // }
 }

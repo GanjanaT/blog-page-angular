@@ -1,9 +1,9 @@
-<form class="input-wrapper" (submit)="onSendMessage()">
+<form [formGroup]="messageForm" class="input-wrapper" (submit)="onSendMessage()">
     <div class="user-info">
       <h2>{{ username }}</h2>
     </div>
     <div class="input">
-      <textarea name="message" id="message" placeholder="Write a message" [(ngModel)]="message"></textarea>
-      <button type="submit">Send</button>
+      <textarea name="message" id="message" placeholder="Write a message" formControlName="message" (keyup.enter)="onEnter()"></textarea>
+      <button [disabled]="messageForm.invalid">Send</button>
     </div>
 </form>
