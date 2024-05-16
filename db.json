@@ -116,53 +116,5 @@
     }
   ],
   "chat": [
-    {
-      "id": "dc00ebef-3cb9-4ffe-8aaf-f1847f726344",
-      "date": "2024-05-16 13:19:39",
-      "message": "sdsa",
-      "username": "ss"
-    },
-    {
-      "id": "18ad11a9-64d5-4b75-aef1-a6c85e857f64",
-      "date": "2024-05-16 13:32:29",
-      "message": "fff\n",
-      "username": "ss"
-    },
-    {
-      "id": "2d80cb8c-3ff2-4f2f-9ffa-242c8dcd4a10",
-      "date": "2024-05-16 13:34:16",
-      "message": "fdsfs",
-      "username": "df"
-    },
-    {
-      "id": "dc821807-6e5b-4b56-a869-3a0ff77e60c9",
-      "date": "2024-05-16 13:34:54",
-      "message": "hj\n",
-      "username": "2"
-    },
-    {
-      "id": "1966fbb7-3d1a-4212-9bed-f08a2d98ec2f",
-      "date": "2024-05-16 13:52:02",
-      "message": "ss\n",
-      "username": "hh"
-    },
-    {
-      "id": "745bbd81-2635-4ad5-a468-4f1f20908e92",
-      "date": "2024-05-16 13:53:00",
-      "message": "ss",
-      "username": "ss"
-    },
-    {
-      "id": "a2909725-1422-4db8-95d1-a474382730df",
-      "date": "2024-05-16 13:53:17",
-      "message": "haha\n",
-      "username": "ss"
-    },
-    {
-      "id": "bf8f625d-2581-4c2b-abf6-85910b1a016a",
-      "date": "2024-05-16 13:53:36",
-      "message": "aa\n",
-      "username": "ss"
-    }
   ]
 }
