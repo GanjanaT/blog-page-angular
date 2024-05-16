@@ -6,7 +6,7 @@
         "sidebar blog-post"
         "sidebar comments-wrapper";
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 65% 35%;
+    grid-template-rows: 60% 40%;
 }
 
 .sidebar {

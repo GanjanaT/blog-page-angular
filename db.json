@@ -41,13 +41,13 @@
           "id": "aed444ac-26ff-41be-b64a-b75b576bf33b",
           "name": "Christian",
           "comment": "Nice! I really like reading your posts! :D",
-          "date": "2024-05-13"
+          "date": "2024-03-13"
         },
         {
           "id": "ebdc5bbd-66b1-4d42-b11f-cfe15879803f",
           "name": "Karen",
           "comment": "Popular place! Its too crowded for me.",
-          "date": "2024-05-13"
+          "date": "2024-05-10"
         },
         {
           "id": "659b377f-290b-4c58-8013-53834a741884",
@@ -64,13 +64,13 @@
           "id": "c9daf5cb-1759-4aa5-938f-34f4e6133ebb",
           "name": "Linda",
           "comment": "I've been there too and i loved it!",
-          "date": "2024-05-14"
+          "date": "2024-02-24"
         },
         {
           "id": "cb5dafb7-b33c-4844-919f-4d02ece475cd",
           "name": "Oliver",
           "comment": "Where is Amalfi? :D",
-          "date": "2024-05-14"
+          "date": "2023-10-14"
         }
       ]
     },
@@ -84,38 +84,36 @@
           "date": "2024-05-15"
         }
       ]
+    },
+    {
+      "id": "3c9ac54b-3433-47bd-a4e7-340da6915301",
+      "pageComments": [
+        {
+          "id": "c65b1e5c-abf6-46ac-817f-40159f77606c",
+          "name": "Erica",
+          "comment": "Depends on the time of year really, had a blast last summer! Nice people and the swedish meatballs are to die for!",
+          "date": "2024-03-16"
+        },
+        {
+          "id": "1da087d8-8934-4649-92eb-567f3c1fea71",
+          "name": "Not Karen",
+          "comment": "Oh so typically you Karen!!!",
+          "date": "2024-03-24"
+        },
+        {
+          "id": "ed0c397d-d043-413d-ba60-3a75c93d5616",
+          "name": "Dani",
+          "comment": "The swedish winter are amazing, so magical with all the snow glittering on the ground, houses, trees, yeah you name it.",
+          "date": "2024-05-10"
+        },
+        {
+          "id": "017d3a9f-818d-4dda-83b0-fdf0a751042d",
+          "name": "Larsson",
+          "comment": "I'm from stockholm and i agree, people are like ice.",
+          "date": "2024-05-16"
+        }
+      ]
     }
   ],
-  "chat": [
-    {
-      "id": "520a2f5b-4eb8-43c5-af27-8a442dd0a89b",
-      "date": "2024-05-15 22:51:54",
-      "message": "whaaaaat\n",
-      "username": "draken"
-    },
-    {
-      "id": "bf647b21-9289-47e9-ad7e-ad64d10a447d",
-      "date": "2024-05-15 22:52:10",
-      "message": "Hej\n",
-      "username": "Pippi"
-    },
-    {
-      "id": "7b0b3e00-a597-4ff9-b213-eeec5fafb7f7",
-      "date": "2024-05-16 11:32:55",
-      "message": "hej\n",
-      "username": "draken"
-    },
-    {
-      "id": "45a52c14-68b3-415d-8d11-78320cc25e67",
-      "date": "2024-05-16 11:33:23",
-      "message": "vaa\n",
-      "username": "draken"
-    },
-    {
-      "id": "e44c1241-101c-4649-9238-986a030c9c3d",
-      "date": "2024-05-16 11:33:35",
-      "message": "aa\n",
-      "username": "draken"
-    }
-  ]
+  "chat": []
 }
