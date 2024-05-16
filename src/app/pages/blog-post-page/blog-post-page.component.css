@@ -60,3 +60,28 @@ h2 span {
 h3 {
     margin: 0;
 }
+
+@media only screen and (max-width:820px) { 
+    .container {
+        grid-template-areas:
+        "sidebar"
+        "blog-post"
+        "comments-wrapper";
+    grid-template-columns: 1fr;
+    grid-template-rows: 19% 46% 35%;
+    }
+    
+    img{
+    display: none;
+    }
+}
+
+@media only screen and (max-width:580px) { 
+    .container {
+        grid-template-rows: 9% 51% 40%;
+    }
+
+    .comments-wrapper {
+        grid-template-rows: 6% 50% 34%;
+    }
+}

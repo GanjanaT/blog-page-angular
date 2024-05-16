@@ -25,6 +25,7 @@ export class SidebarComponent{
     })
 
     this.userInput = "";
+
   }
  
 }

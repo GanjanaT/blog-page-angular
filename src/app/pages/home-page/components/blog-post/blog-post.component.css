@@ -3,8 +3,10 @@
     padding: 20px;
     min-height: 200px;
     max-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: white;
-    /* border-radius: 5px; */
     box-shadow: 1px 2px 4px gray;
 }
 
@@ -34,16 +36,10 @@ p {
     font-family: "Poppins", sans-serif;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 7;
     overflow: hidden;
     text-overflow: ellipsis;
     line-break:anywhere;
-}
-
-.blog-post-img {
-    height: 125px;
-    border: 5px solid white;
-    box-shadow: 1px 2px 4px gray;
 }
 
 .published-by {
@@ -52,5 +48,5 @@ p {
     font-size: 0.9em;
     font-weight: 500;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }

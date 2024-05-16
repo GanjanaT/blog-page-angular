@@ -29,7 +29,6 @@ export class ChatFormComponent implements OnInit {
 
   onEnter(){
     if(this.messageForm.value.message === "\n"){
-      console.log("error");
       this.messageForm.reset();
     }else {
       this.onSendMessage();

@@ -36,9 +36,3 @@ export class BlogFormComponent {
       alert('your blog post was succesfully published')
   }
 }
-
-// använder ReactiveForms för att hämta input data och ge dem validering
-// vid submit så skapas en instans av BlogPost klassen med
-// värden från blogpostForm.
-// använder service metod addBlogPost för att lägga till blog posten.
-// använder getter för att hämta alla input fält för att kunna reseta dem.

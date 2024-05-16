@@ -41,6 +41,10 @@ textarea {
     resize: none;
 }
 
+:is(textarea).ng-invalid.ng-touched{
+    border: 1px solid rgb(255, 0, 0);
+}
+
 button {
     width: 20%;
     height: 50px;

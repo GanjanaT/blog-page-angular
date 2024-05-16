@@ -24,7 +24,7 @@ ngOnInit(): void {
     this.messageSubscription = timer(0, 1000).pipe(
     switchMap(() => this.chatService.getMessages()),
     retry()
-  ).subscribe((messages) => {this.messages = messages})
+  ).subscribe((messages) => this.messages = messages)
 
   setTimeout(() => {
     this.scrollToBottom()

@@ -1,13 +1,11 @@
 <div class="chat-container" #chatContainer>
   @for(message of messages; track $index){
-  <div
-    class="message right"
-    [ngClass]="message.username === user ? 'right' : 'left'"
-  >
-    <div class="user-info">
-      <div class="user">
-        <img src="/assets/account.png" alt="user" />
-        <span>{{ message.username }}</span>
+      <div class="message-wrapper" [ngClass]="message.username === user ? 'right' : 'left'">
+        <div class="first-letter">{{message.username.charAt(0).toUpperCase()}}</div>
+      <div class="message" [ngClass]="message.username === user ? 'rightBg' : 'leftBg'">
+        <div class="user-info">
+          <div class="user">
+        <p>{{ message.username }}</p>
       </div>
       <div>
         <span>{{ message.date | date: 'short' }}</span>
@@ -15,5 +13,6 @@
     </div>
     <p>{{ message.message }}</p>
   </div>
+      </div>
   }
 </div>
