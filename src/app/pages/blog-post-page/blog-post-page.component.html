@@ -3,7 +3,7 @@
   <section class="blog-post">
     <div>
       <h2>
-        {{ blogPost.title }} <span>{{ blogPost.date }}</span>
+        {{ blogPost.title }} <span>{{ blogPost.date | date: 'MMMM d y, h:mm a' }}</span>
       </h2>
       <p>{{ blogPost.content }}</p>
     </div>

@@ -8,9 +8,10 @@ import { INavLink } from '../../core/nav-link.model';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
   navLinkService = inject(NavLinkService);
-  routes : INavLink[] = this.navLinkService.getRoutes()
+  routes: INavLink[] = this.navLinkService.getRoutes();
+
 }

@@ -17,6 +17,7 @@ import { CommonModule } from '@angular/common';
 export class HomePageComponent implements OnInit {
   blogPosts: BlogPost[] = [];
   blogPostsExists : boolean = true;
+  counter : number = 0;
   blogPostService: BlogPostService = inject(BlogPostService);
 
   ngOnInit(): void {

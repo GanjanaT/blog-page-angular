@@ -1,7 +1,7 @@
 <article class="blog-post">
   <a [routerLink]="['/blog-post-page', blogPost.id]">
     <h3>
-      {{ blogPost.title }} <span>{{ blogPost.date }}</span>
+      {{ blogPost.title }} <span>{{ blogPost.date | date:'longDate' }}</span>
     </h3>
   </a>
   <p>{{ blogPost.content }}</p>

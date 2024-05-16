@@ -6,11 +6,12 @@ import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { CommentsFormComponent } from './components/comments-form/comments-form.component';
 import { CommentsService } from '../../services/comments/comments.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-blog-post-page',
   standalone: true,
-  imports: [SidebarComponent, CommentsComponent, CommentsFormComponent],
+  imports: [SidebarComponent, CommentsComponent, CommentsFormComponent, CommonModule],
   templateUrl: './blog-post-page.component.html',
   styleUrl: './blog-post-page.component.css',
 })
