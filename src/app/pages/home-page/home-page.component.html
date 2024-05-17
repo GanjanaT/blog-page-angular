@@ -1,5 +1,5 @@
 <div class="container">
-  <app-sidebar class="sidebar" (filterPosts)="onFilterBlogPosts($event)"></app-sidebar>
+  <app-sidebar class="sidebar" (filterPosts)="onFilterBlogPosts($event)" [show]="true"></app-sidebar>
   <div class="blogposts" #blogContainer>
     @if(!blogPostsExists){
       <p class="error">Sorry no blog posts matched your searched word!</p>

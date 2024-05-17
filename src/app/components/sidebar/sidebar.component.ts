@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, inject } from '@angular/core';
+import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { BlogPostService } from '../../services/blog-post/blog-post.service';
 import { FormsModule } from '@angular/forms';
 import { BlogPost } from '../../core/blog-post.model';
@@ -13,6 +13,7 @@ import { BlogPost } from '../../core/blog-post.model';
 export class SidebarComponent{
   userInput: string = "";
   filteredList: BlogPost[] = [];
+  @Input() show : boolean = true;
   @Output() filterPosts = new EventEmitter<BlogPost[]>()
   blogPostService : BlogPostService = inject(BlogPostService)
   
